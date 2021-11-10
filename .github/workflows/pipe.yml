@@ -29,6 +29,12 @@ jobs:
       
       - name: Run docker
         uses: ./
+        
+      - name: Run docker Compose
+        run: |
+          docker-compose up --build
+          docker-compose down
+
       
       - name: Running Open Source Security by Snyk
         run: |
@@ -42,5 +48,5 @@ jobs:
           curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
           horusec start -p .
 
-      - name: OWASP ZAP Full Scan
-      - uses: zaproxy/action-full-scan@v0.3.0
+    #  - name: OWASP ZAP Full Scan
+    #  - uses: zaproxy/action-full-scan@v0.3.0
