@@ -27,8 +27,8 @@ jobs:
 
       # Runs a set of commands using the runners shell
       
-      - name: Run docker
-        uses: ./
+     # - name: Run docker
+     #   uses: ./
         
       - name: Run docker Compose
         run: |
